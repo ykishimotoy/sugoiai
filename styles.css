@@ -681,7 +681,8 @@ ul {
 .project-card,
 .number-item,
 .philosophy-content,
-.personal-card {
+.personal-card,
+.member-card {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -693,6 +694,7 @@ ul {
 .visible .number-item,
 .visible .philosophy-content,
 .visible .personal-card,
+.visible .member-card,
 .hero .hero-content {
   opacity: 1;
   transform: translateY(0);
@@ -837,5 +839,92 @@ ul {
   .section-desc {
     margin-top: -20px;
     margin-bottom: 32px;
+  }
+}
+
+/* ============================================
+   Team
+   ============================================ */
+.team {
+  padding: 120px 0;
+  background: var(--gray-100);
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 32px;
+}
+
+.member-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  border-color: var(--gray-300);
+}
+
+.member-photo img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.member-info {
+  padding: 20px 16px 24px;
+}
+
+.member-role {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(37, 99, 235, 0.08);
+  padding: 4px 10px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.member-name {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+
+.member-nickname {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+}
+
+.member-card:nth-child(1) { transition-delay: 0s; }
+.member-card:nth-child(2) { transition-delay: 0.1s; }
+.member-card:nth-child(3) { transition-delay: 0.2s; }
+.member-card:nth-child(4) { transition-delay: 0.3s; }
+
+@media (max-width: 1024px) {
+  .member-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .team {
+    padding: 80px 0;
+  }
+
+  .member-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 }
