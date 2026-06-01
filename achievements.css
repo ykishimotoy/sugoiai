@@ -1,0 +1,483 @@
+/* ============================================
+   Achievements Page Styles
+   ============================================ */
+
+/* Header */
+.achievements-header {
+  padding: 80px 0 40px;
+  background: var(--gray-100);
+}
+
+.achievements-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.header-subtitle {
+  font-size: 1.125rem;
+  color: var(--gray-600);
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-600);
+  margin-bottom: 24px;
+  transition: var(--transition);
+}
+
+.back-link:hover {
+  color: var(--black);
+}
+
+/* Summary Stats */
+.summary-stats {
+  padding: 60px 0;
+  background: var(--black);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-number {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--gray-500);
+}
+
+/* Section Headings */
+.achievement-section {
+  padding: 80px 0;
+}
+
+.achievement-section.alt-bg {
+  background: var(--gray-100);
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 40px;
+}
+
+.heading-number {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+.heading-subtitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-500);
+}
+
+.subsection-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin: 40px 0 20px;
+}
+
+.subsection-title:first-of-type {
+  margin-top: 0;
+}
+
+/* Tables */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 0 -24px;
+  padding: 0 24px;
+}
+
+.achievement-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 600px;
+}
+
+.achievement-table thead {
+  background: var(--gray-800);
+}
+
+.achievement-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.achievement-table tbody tr {
+  border-bottom: 1px solid var(--gray-200);
+  transition: background 0.2s ease;
+}
+
+.achievement-table tbody tr:hover {
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.alt-bg .achievement-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.achievement-table td {
+  padding: 14px 16px;
+  color: var(--gray-700);
+  vertical-align: top;
+}
+
+.achievement-table td:first-child {
+  white-space: nowrap;
+  font-weight: 500;
+  color: var(--gray-800);
+}
+
+.achievement-table a {
+  color: var(--accent);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.achievement-table a:hover {
+  color: var(--accent-light);
+  text-decoration: underline;
+}
+
+/* Community Table - 名称 column bold */
+.community-table td:nth-child(3) {
+  font-weight: 700;
+  color: var(--black);
+}
+
+/* Education Table - 機関・学部 column bold */
+.education-table td:nth-child(3) {
+  font-weight: 700;
+  color: var(--black);
+}
+
+/* Timeline Table */
+.timeline-table td:first-child {
+  font-weight: 700;
+  color: var(--black);
+}
+
+.timeline-table td:nth-child(2) {
+  font-weight: 600;
+  color: var(--black);
+}
+
+/* Product Cards */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.product-card {
+  display: block;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--gray-600);
+  transition: var(--transition);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  border-color: var(--gray-700);
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--gray-600);
+}
+
+.product-image img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 24px;
+}
+
+.product-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  transition: var(--transition);
+}
+
+.product-card:hover .product-link {
+  color: var(--accent-light);
+}
+
+.product-info h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.product-info p {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* Footer */
+.achievements-footer {
+  padding: 80px 0 60px;
+  background: var(--gray-900);
+  text-align: center;
+}
+
+.achievements-footer h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.achievements-footer > .container > p {
+  font-size: 1rem;
+  color: var(--gray-500);
+  margin-bottom: 32px;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.achievements-footer .back-link {
+  color: var(--gray-500);
+  margin-bottom: 0;
+}
+
+.achievements-footer .back-link:hover {
+  color: var(--white);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .achievement-section {
+    padding: 60px 0;
+  }
+
+  .section-heading {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Education Table - min-width for horizontal scroll on mobile */
+.education-table {
+  min-width: 900px;
+}
+
+/* Mobile column min-widths (スマホのみ) */
+@media (max-width: 768px) {
+  /* コミュニティ・イベント */
+  .community-table th:nth-child(1) { min-width: 5em; }
+  .community-table th:nth-child(2) { min-width: 7em; }
+  .community-table th:nth-child(3) { min-width: 10em; }
+  .community-table th:nth-child(4) { min-width: 13em; }
+  .community-table th:nth-child(5) { min-width: 16em; }
+  .community-table th:nth-child(6) { min-width: 8em; }
+
+  /* 大学 */
+  .university-table th:nth-child(1) { min-width: 10em; }
+  .university-table th:nth-child(2) { min-width: 5em; }
+  .university-table th:nth-child(3) { min-width: 7em; }
+  .university-table th:nth-child(4) { min-width: 9em; }
+  .university-table th:nth-child(5) { min-width: 10em; }
+  .university-table th:nth-child(6) { min-width: 8em; }
+  .university-table th:nth-child(7) { min-width: 4em; }
+  .university-table th:nth-child(8) { min-width: 8em; }
+  .university-table th:nth-child(9) { min-width: 10em; }
+
+  /* その他教育機関 */
+  .other-edu-table th:nth-child(1) { min-width: 10em; }
+  .other-edu-table th:nth-child(2) { min-width: 8em; }
+  .other-edu-table th:nth-child(3) { min-width: 11em; }
+  .other-edu-table th:nth-child(4) { min-width: 10em; }
+  .other-edu-table th:nth-child(5) { min-width: 16em; }
+  .other-edu-table th:nth-child(6) { min-width: 8em; }
+  .other-edu-table th:nth-child(7) { min-width: 4em; }
+  .other-edu-table th:nth-child(8) { min-width: 8em; }
+  .other-edu-table th:nth-child(9) { min-width: 8em; }
+
+  /* メディア掲載 */
+  .media-table th:nth-child(1) { min-width: 10em; }
+  .media-table th:nth-child(2) { min-width: 7em; }
+  .media-table th:nth-child(3) { min-width: 16em; }
+  .media-table th:nth-child(4) { min-width: 5em; }
+
+  /* プラットフォーム別 */
+  .platform-table th:nth-child(1) { min-width: 9em; }
+  .platform-table th:nth-child(2) { min-width: 8em; }
+  .platform-table th:nth-child(3) { min-width: 5em; }
+  .platform-table th:nth-child(4) { min-width: 5em; }
+
+  /* 注目記事 */
+  .articles-table th:nth-child(1) { min-width: 4em; }
+  .articles-table th:nth-child(2) { min-width: 20em; }
+  .articles-table th:nth-child(3) { min-width: 7em; }
+  .articles-table th:nth-child(4) { min-width: 5em; }
+
+  /* 書籍 */
+  .books-table th:nth-child(1) { min-width: 5em; }
+  .books-table th:nth-child(2) { min-width: 23em; }
+  .books-table th:nth-child(3) { min-width: 4em; }
+  .books-table th:nth-child(4) { min-width: 9em; }
+  .books-table th:nth-child(5) { min-width: 8em; }
+  .books-table th:nth-child(6) { min-width: 10em; }
+  .books-table th:nth-child(7) { min-width: 5em; }
+
+  /* タイムライン */
+  .timeline-table th:nth-child(1) { min-width: 6em; }
+  .timeline-table th:nth-child(2) { min-width: 14em; }
+  .timeline-table th:nth-child(3) { min-width: 16em; }
+}
+
+@media (max-width: 480px) {
+  .achievements-header {
+    padding: 60px 0 32px;
+  }
+
+  .summary-stats {
+    padding: 40px 0;
+  }
+
+  .stats-grid {
+    gap: 20px 16px;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .contact-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+/* PDF Modal */
+.pdf-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.pdf-modal.active {
+  display: flex;
+}
+
+.pdf-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pdf-modal.active .pdf-modal-overlay {
+  opacity: 1;
+}
+
+.pdf-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  max-height: calc(100vh - 48px);
+  height: 100%;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-modal.active .pdf-modal-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.pdf-modal-content iframe {
+  width: 100%;
+  flex: 1;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.pdf-modal-close {
+  align-self: flex-end;
+  margin-bottom: 8px;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: opacity 0.2s ease;
+}
+
+.pdf-modal-close:hover {
+  opacity: 0.7;
+}
