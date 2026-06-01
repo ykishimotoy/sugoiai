@@ -13,6 +13,8 @@
   const contentJa = document.getElementById('content-ja');
   const contentEn = document.getElementById('content-en');
 
+  const isAchievements = window.location.pathname.includes('achievements');
+
   // ============================================
   // Language Switching
   // ============================================
@@ -24,14 +26,18 @@
       langJaBtn.classList.remove('active');
       langEnBtn.classList.add('active');
       document.documentElement.lang = 'en';
-      document.title = 'Yusuke Kishimoto | AI × Education × Community';
+      document.title = isAchievements
+        ? 'Achievements | Sapporo Sugoi AI'
+        : 'Sapporo Sugoi AI | Experience & Share the Wonder of AI';
     } else {
       contentJa.style.display = 'block';
       contentEn.style.display = 'none';
       langJaBtn.classList.add('active');
       langEnBtn.classList.remove('active');
       document.documentElement.lang = 'ja';
-      document.title = '岸本悠佑 | AI × 教育 × コミュニティ';
+      document.title = isAchievements
+        ? '活動実績一覧 | 札幌すごいAI会'
+        : '札幌すごいAI会 | AIってすごい、を体感し、分かち合う';
     }
 
     try {
